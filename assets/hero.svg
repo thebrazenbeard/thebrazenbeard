@@ -1,0 +1,78 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">Patrick Sims — thebrazenbeard</title>
+  <desc id="desc">Animated systems-console style profile banner.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#07111f"/>
+      <stop offset="55%" stop-color="#0d1117"/>
+      <stop offset="100%" stop-color="#101826"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58a6ff"/>
+      <stop offset="50%" stop-color="#79c0ff"/>
+      <stop offset="100%" stop-color="#a371f7"/>
+    </linearGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M 32 0 L 0 0 0 32" fill="none" stroke="#1f2a38" stroke-width="1"/>
+    </pattern>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <style>
+      .mono{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace}
+      .scan{animation:scan 7s linear infinite}
+      .pulse{animation:pulse 2.4s ease-in-out infinite}
+      .cursor{animation:blink 1s steps(1,end) infinite}
+      @keyframes scan{from{transform:translateX(-260px)}to{transform:translateX(1460px)}}
+      @keyframes pulse{0%,100%{opacity:.35}50%{opacity:1}}
+      @keyframes blink{0%,45%{opacity:1}46%,100%{opacity:0}}
+      @media (prefers-reduced-motion:reduce){.scan,.pulse,.cursor{animation:none}}
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="22" fill="url(#bg)"/>
+  <rect width="1200" height="320" rx="22" fill="url(#grid)" opacity=".55"/>
+  <rect x="1" y="1" width="1198" height="318" rx="21" fill="none" stroke="#30363d"/>
+
+  <g opacity=".28" class="scan">
+    <rect x="-260" y="0" width="240" height="320" fill="url(#accent)"/>
+  </g>
+
+  <g class="mono">
+    <rect x="46" y="36" width="176" height="30" rx="15" fill="#0f1f31" stroke="#24496d"/>
+    <circle cx="65" cy="51" r="5" fill="#3fb950" class="pulse"/>
+    <text x="80" y="56" font-size="13" fill="#8b949e" letter-spacing="1.4">SYSTEMS // ONLINE</text>
+
+    <text x="46" y="132" font-size="60" font-weight="700" fill="#f0f6fc" letter-spacing="2">PATRICK SIMS</text>
+    <text x="50" y="171" font-size="23" fill="#79c0ff">@thebrazenbeard</text>
+    <rect x="265" y="151" width="10" height="24" rx="2" fill="#79c0ff" class="cursor"/>
+
+    <text x="48" y="220" font-size="17" fill="#b1bac4" letter-spacing="1.1">AI SYSTEMS · ORCHESTRATION · CONTINUAL LEARNING · EVIDENCE GOVERNANCE</text>
+
+    <g transform="translate(48 252)">
+      <rect width="150" height="35" rx="8" fill="#111b27" stroke="#25384d"/>
+      <text x="18" y="23" font-size="14" fill="#7ee787">BUILD</text>
+      <text x="83" y="23" font-size="12" fill="#8b949e">→ SYSTEM</text>
+    </g>
+    <g transform="translate(216 252)">
+      <rect width="164" height="35" rx="8" fill="#111b27" stroke="#25384d"/>
+      <text x="18" y="23" font-size="14" fill="#79c0ff">VERIFY</text>
+      <text x="91" y="23" font-size="12" fill="#8b949e">→ CLAIM</text>
+    </g>
+    <g transform="translate(398 252)">
+      <rect width="158" height="35" rx="8" fill="#111b27" stroke="#25384d"/>
+      <text x="18" y="23" font-size="14" fill="#d2a8ff">ADAPT</text>
+      <text x="84" y="23" font-size="12" fill="#8b949e">→ STATE</text>
+    </g>
+
+    <g transform="translate(870 54)" opacity=".9">
+      <circle cx="110" cy="105" r="83" fill="none" stroke="#26364a" stroke-width="1"/>
+      <circle cx="110" cy="105" r="58" fill="none" stroke="#24496d" stroke-width="1.2"/>
+      <circle cx="110" cy="105" r="31" fill="none" stroke="#3b6fa1" stroke-width="1.4"/>
+      <circle cx="110" cy="105" r="7" fill="#58a6ff" filter="url(#glow)" class="pulse"/>
+      <path d="M27 105h166M110 22v166M51 46l118 118M169 46L51 164" stroke="#26364a" stroke-width="1"/>
+      <text x="110" y="215" text-anchor="middle" font-size="12" fill="#6e7681" letter-spacing="2">SIGNAL / STATE / EVIDENCE</text>
+    </g>
+  </g>
+</svg>
