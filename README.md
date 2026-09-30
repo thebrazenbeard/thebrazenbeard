@@ -4,7 +4,7 @@
 
 ### `@thebrazenbeard`
 
-**Building systems around AI agents, persistent state, evaluation governance, workstation tooling, and evidence-disciplined research.**
+**Building durable AI systems for orchestration, reasoning, corrective learning, provenance, semantic execution, and continual adaptation.**
 
 [![GitHub](https://img.shields.io/badge/GitHub-thebrazenbeard-181717?logo=github&logoColor=white)](https://github.com/thebrazenbeard)
 
@@ -12,18 +12,29 @@
 
 ---
 
-## What I'm building
+## Core focus
 
-I work on systems where model behavior, durable state, real tools, and evidence have to remain distinguishable from the stories we tell about them.
+These are the projects closest to the center of what I'm building.
 
 | Project | What it is |
 |---|---|
-| [**V.E.R.A.**](https://github.com/thebrazenbeard/vera) | **Virtual Environment for Reciprocal Agency** — cross-cutting architecture, schemas, validators, runtime support, and governed state/evidence boundaries. |
-| [**unbound-sol**](https://github.com/thebrazenbeard/unbound-sol) | A public durable workspace testing how much continuity, individuality, learning, and developmental trajectory can accumulate around a shared model when persistent state lives outside model weights. |
-| [**DriftGuard**](https://github.com/thebrazenbeard/driftguard) | Deterministic regression admission for AI agents: explicit policy, accepted baselines, exact evidence, and `PASS / WARN / BLOCK / UNKNOWN` decisions. |
-| [**WorkBridgeMCP**](https://github.com/thebrazenbeard/WorkBridgeMCP) | A bounded MCP workstation bridge designed to expose useful filesystem/process capability without quietly becoming an unrestricted remote shell. |
-| [**VERA Model Training**](https://github.com/thebrazenbeard/vera_model_training) | A zero-cost external training workbench for source-grounded multi-round training artifacts and later native qualification. |
-| [**on-theo**](https://github.com/thebrazenbeard/on-theo) | Comparative theology, history, symbolism, and systems-modeling research with explicit separation between primary text, reconstruction, interpretation, inference, speculation, and unknowns. |
+| [**V.E.R.A.**](https://github.com/thebrazenbeard/vera) | **Virtual Environment for Reciprocal Agency** — the cross-cutting architecture for governed state, evidence, runtime cohesion, and durable AI-system behavior. |
+| [**Project Runner**](https://github.com/thebrazenbeard/project-runner) | A public-safe multi-repository orchestration kernel for deciding what changed, what depends on it, what work is justified, what may execute, and what evidence proves completion. |
+| [**Rezon**](https://github.com/thebrazenbeard/rezon) | An executable direction for heterogeneous reasoning: decomposition, multiple reasoning methods, adversarial challenge, retrieval, provenance verification, integration, and persistent subject/state tracking. |
+| [**The F.U.C.K.U.P. Protocol**](https://github.com/thebrazenbeard/fuckup) | **Flag · Understand · Calibrate · Know · Unlearn · Prevent** — a corrective-learning protocol and runtime for turning failures into bounded, testable, reversible prevention mechanisms. |
+| [**Ingest**](https://github.com/thebrazenbeard/ingest) | A provider-neutral universal intake boundary that preserves exact raw material, normalizes explicitly, hashes deterministically, keeps provenance attached, and refuses to confuse intake with truth. |
+| [**SQL Connectome**](https://github.com/thebrazenbeard/sql-connectome) | A semantic network for understanding, comparing, translating, validating, routing, and safely executing SQL-family languages without pretending every dialect has the same semantics. |
+| [**LGCM**](https://github.com/thebrazenbeard/lgcm) | An experimental learned general cognitive model for persistent continual learning: adaptation, context recall, predictive modeling, recovery of prior internal models, and bounded planning. |
+
+## Selected other work
+
+These are projects I think best show the engineering philosophy from another angle.
+
+| Project | Why it belongs here |
+|---|---|
+| [**DriftGuard**](https://github.com/thebrazenbeard/driftguard) | Deterministic regression admission for AI agents. It turns behavioral measurements into explicit `PASS / WARN / BLOCK / UNKNOWN` decisions bound to policy, baseline, evidence, and exact results. |
+| [**WorkBridgeMCP**](https://github.com/thebrazenbeard/WorkBridgeMCP) | A bounded MCP workstation bridge: useful real-machine capability without quietly turning tool access into unrestricted authority. |
+| [**Pro-Run**](https://github.com/thebrazenbeard/pro-run) | Durable continuous execution for tool-using language models, with recoverable runs, constrained tool calls, idempotent effects, and reconciliation instead of blind replay. |
 
 ## Working principles
 
@@ -32,6 +43,7 @@ I work on systems where model behavior, durable state, real tools, and evidence 
 - **Persistent state should change future behavior, not merely archive prose.**
 - **Missing evidence is not a pass.**
 - **Interesting hypotheses deserve hostile review, not protection.**
+- **A tool being technically capable of an effect does not make that effect authorized.**
 
 ## Languages & tools
 
