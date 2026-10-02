@@ -92,3 +92,16 @@ Disposition:
 ## Effect boundary
 
 This audit intentionally performs no repository archive, delete, visibility change, merge, direct main mutation, deployment, credential change, or provider cutover.
+
+
+## Executed cleanup wave — 2026-10-02
+
+Verified archived repositories:
+
+- `build-team-2.0` — archived as legacy predecessor/compatibility provenance; active BT2 workspace remains `bt2`.
+- `bugops` — four open SEV-1 incidents transferred to RepairTracker issues #6–#9; exact reports and registry preserved in RepairTracker Draft PR #5; BugOps then archived.
+- `brigit-unbound` — archive validator passed at exact head `f1350ef794acd0e8a657bb38d21e66f4775501a0`; repository then archived as historical provenance.
+
+Current hold set includes `vera-R9A0`, `deepmemorystorage`, `transcendence`, and the WorkBridge family because each still has live work or an unresolved cutover dependency.
+
+A dated Vera-side archive receipt is prepared in Draft PR #218. No merge was performed.
