@@ -105,3 +105,42 @@ Verified archived repositories:
 Current hold set includes `vera-R9A0`, `deepmemorystorage`, `transcendence`, and the WorkBridge family because each still has live work or an unresolved cutover dependency.
 
 A dated Vera-side archive receipt is prepared in Draft PR #218. No merge was performed.
+
+
+## Follow-up disposition corrections — 2026-10-02
+
+### Roots / Ingest
+
+`ingest` does not supersede `roots`. Ingest owns exact acquisition, normalization, content identity and provenance-bearing intake; Roots owns downstream chronology/lineage reconstruction, derivation, correction, supersession and gap analysis. Vera Mono has absorbed only a reusable subset of Roots mechanisms. Keep standalone Roots active unless a future deliberate full absorption proves equivalent coverage.
+
+### MESO-CRCT / Sexuality / Orgasm
+
+`meso-crct` currently treats `sexuality` and `orgasm` as architecture donors while explicitly excluding sexual-domain semantics. It therefore does not presently supersede either repository.
+
+- `sexuality`: HOLD ACTIVE — open Vera Sexual Drive / sexual-self-concept qualification PRs and domain research not represented by MESO-CRCT.
+- `orgasm`: HOLD ACTIVE — open clean-successor/bootstrap PR and historical qualification/provenance role.
+- Future retirement requires an explicit absorption target for the sexual-domain semantics and migration/closure of live PR subjects.
+
+### Generalization work
+
+- `intranel`: Draft PR #8 generalizes the active protocol/docs beyond Vera-specific deployment while preserving old Vera namespace vectors as compatibility fixtures.
+- `personification`: Draft PR #3 removes Brigit-specific active framing and rewrites the active charter/notes as a reusable Personification framework.
+
+### WorkBridge family
+
+Draft `workbridgecommander` PR #6 defines the consolidation target as three coherent WorkBridge surfaces rather than one god-repository:
+
+- `WorkBridgeMCP`: workstation implementation / qualification / packaging.
+- `workbridgecommander`: remote ingress, authenticated device attachment, session/orchestration.
+- `workbridge`: constrained-host / NAS / DSM packaging and edge distribution.
+
+Migration candidates:
+- `vera-mesh` -> WorkBridge transport/session mechanisms after live issue migration.
+- `vera-synology` -> `workbridge` after PR #9-#12 subjects are migrated/closed.
+- `vera-apk` -> WorkBridge client surface.
+- `vera-os` -> Vera Mono donor extraction, not WorkBridge.
+- `vera_ark` -> extract reusable infrastructure only; keep application semantics outside core WorkBridge.
+
+### Vera Habitat
+
+`vera-habitat` remains active and is not a World Zero duplicate. Draft PR #4 explores V2 as a deterministic replayable virtual-world authority with simulation time/events, persistence/replay, topology, typed affordances, participant-scoped perception and renderer adapters while retaining the simulation/external-effect firewall.
