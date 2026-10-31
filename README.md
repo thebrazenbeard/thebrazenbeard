@@ -13,6 +13,8 @@
 
 </div>
 
+These are independently evolving products, libraries, and research components—not an assertion that the entire portfolio is deployed as one runtime. Check each repository for implemented features, tests, licensing, and integration boundaries; public source visibility does not itself grant redistribution rights.
+
 ---
 
 ## System topology
@@ -39,7 +41,7 @@ Cross-cutting architecture for governed state, evidence, runtime cohesion, and d
 
 ### [Project Runner](https://github.com/thebrazenbeard/project-runner)
 
-A multi-repository orchestration kernel for deciding what changed, what depends on it, what work is justified, what may execute, and what evidence proves completion.
+A multi-repository orchestration kernel for tracking what changed, what depends on it, what work is justified, which capabilities are admitted, and what completion evidence supports.
 
 </td>
 </tr>
@@ -49,7 +51,7 @@ A multi-repository orchestration kernel for deciding what changed, what depends 
 
 ### [Rezon](https://github.com/thebrazenbeard/rezon)
 
-Heterogeneous reasoning through decomposition, multiple reasoning methods, adversarial challenge, retrieval, provenance verification, integration, and persistent subject/state tracking.
+Provider-independent structured reasoning and optional parallel model-endpoint coordination. It records evidence and objections with attributable replies; model agreement is not proof of truth or authorization.
 
 </td>
 <td width="50%" valign="top">
@@ -75,7 +77,7 @@ A provider-neutral intake boundary that preserves exact raw material, normalizes
 
 ### [SQL Connectome](https://github.com/thebrazenbeard/sql-connectome)
 
-A semantic network for understanding, comparing, translating, validating, routing, and safely executing SQL-family languages without pretending every dialect has the same semantics.
+A semantic SQL-dialect library with optional REST and MCP interfaces for comparing capabilities and modeling translations. Translation is not proof of equivalence, and routing a query does not authorize execution.
 
 </td>
 </tr>
@@ -85,7 +87,7 @@ A semantic network for understanding, comparing, translating, validating, routin
 
 ### [LGCM](https://github.com/thebrazenbeard/lgcm)
 
-An experimental learned general cognitive model for persistent continual learning: adaptation, context recall, predictive modeling, recovery of prior internal models, and bounded planning.
+An experimental Python continual-learning library for bounded numerical dynamics: action-conditioned prediction, adaptation, context recall, and recovery. General-purpose planning and pretrained language-model training are not implemented.
 
 </td>
 </tr>
@@ -113,9 +115,9 @@ A bounded MCP workstation bridge: useful real-machine capability without quietly
 </td>
 <td width="33%" valign="top">
 
-### [Pro-Run](https://github.com/thebrazenbeard/pro-run)
+### [Pre-Active](https://github.com/thebrazenbeard/pre-active)
 
-Durable continuous execution for tool-using language models, with recoverable runs, constrained tool calls, idempotent effects, and reconciliation instead of blind replay.
+An event-driven resident runtime for scheduled model turns and recoverable runs. Actual tool handlers, consequential-effect verification, and action authority must be supplied by the host.
 
 </td>
 </tr>
