@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 def read_jsonc(path: Path) -> dict:
-    text = path.read_text(encoding="utf-8")
+    text = path.read_text(encoding="utf-8-sig")
     # Existing workspace JSON sometimes contains trailing commas. Restrict
     # normalization to that syntax; reject anything else malformed.
     return json.loads(re.sub(r",\s*(?=[}\]])", "", text))
@@ -23,7 +23,8 @@ def read_jsonc(path: Path) -> dict:
 class WorkspaceStartupSafetyTests(unittest.TestCase):
     def test_no_folder_open_tasks(self):
         tasks = read_jsonc(ROOT / ".vscode" / "tasks.json")
-        self.assertIsInstance(tasks.get("tasks", []), list)
+        self.assertIsInstance(tasks.get("tasks"), list)
+        self.assertEqual(tasks["tasks"], [], "static profile requires no workspace tasks")
         for task in tasks.get("tasks", []):
             self.assertNotEqual(task.get("runOptions", {}).get("runOn"), "folderOpen")
             command = str(task.get("command", ""))
@@ -34,6 +35,20 @@ class WorkspaceStartupSafetyTests(unittest.TestCase):
         settings = read_jsonc(ROOT / ".vscode" / "settings.json")
         self.assertEqual(settings.get("task.allowAutomaticTasks"), "off")
         self.assertNotIn("tasks", settings, "no embedded startup tasks in settings")
+
+    def test_no_held_editor_paths(self):
+        for name in ("ini", "inq"):
+            with self.subTest(name=name):
+                try:
+                    (ROOT / ".vscode" / name).lstat()
+                except FileNotFoundError:
+                    continue
+                self.fail("held editor path persists: " + name)
+
+    def test_no_hidden_bootstrap_names(self):
+        ignored = (ROOT / ".gitignore").read_text(encoding="utf-8-sig").splitlines()
+        for name in ("config.bat", "temp_auto_push.bat", "temp_interactive_push.bat", "branch_structure.json"):
+            self.assertNotIn(name, ignored)
 
     def test_no_pseudo_font_executable(self):
         self.assertFalse((ROOT / "public" / "fonts" / "fa-solid-500.woff2").exists(), "known pseudo-font JavaScript path persists")
